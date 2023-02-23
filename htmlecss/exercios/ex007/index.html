@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outras Formatações</title>
+</head>
+<body>
+    <h1>Outras Formatações</h1>
+    <h2>Código-Fonte</h2>
+    <p>O Comando <code>System.out.println("Hello World!")</code> é um comando Java</p>
+    <p>
+        <pre>
+            <code>
+package br.com.ctsistemasbrasil.dal;
+import java.sql.*;
+public class ModuloConexao {
+    //método responsavel por estabelece a conexão com o banco
+    public static Connection conector(){
+        java.sql.Connection conexao = null;
+        // a linha abaixo "chama" o drive mysql-connector
+        String driver = "com.mysql.cj.jdbc.Driver";
+        // armazenando informações referente ao banco
+        String url = "jdbc:mysql://192.168.0.2:3306/dbinfox";
+        String user = "dba";
+        String password = "Dba@123456";
+        // estabelece conexão
+        try {
+            Class.forName(driver);
+            conexao = DriverManager.getConnection(url, user, password);
+            return conexao;    
+        } catch (Exception e){
+            //exibir o ero
+            System.out.println(e);
+            return null;
+        }
+           
+    }
+}
+
+            </code>
+        </pre>
+    </p>
+    <h2>Citações</h2>
+    <p>Como diria o pai de um amigo <q>O computador é um burro muito rápido</q></p>
+    <h2>Citações Completas</h2>
+</body>
+</html>
